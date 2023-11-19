@@ -4,7 +4,9 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import ButtonBehavior
 from kivy.uix.image import Image
 from kivy.uix.label import Label
+from kivy.core.window import Window
 from kivy.uix.button import Button
+
 
 class IconLabel(ButtonBehavior, Label):
     pass
@@ -37,15 +39,15 @@ class MainPage(Screen):
         main_layout.add_widget(middle_content)
 
         # Footer with navigation icons
-        footer = BoxLayout(size_hint_y=None, height=50, orientation='horizontal')
-        bottle_button = Button(background_normal='bottle.png', size_hint=(None, None), size=(120, 50))
+        footer = BoxLayout(size_hint_y=None, height=50, orientation='horizontal',
+                           spacing=(Window.width - (3 * 120)) / 7)
+        bottle_button = Button(background_normal='bottle.png', size_hint=(None, None), size=(120, 120))
         bottle_button.bind(on_press=self.go_to_create_bottle)
         footer.add_widget(bottle_button)
-        footer.add_widget(Button(background_normal='search.png', size_hint=(None, None), size=(120, 50)))
-        profile_button = Button(background_normal='person.png', size_hint=(None, None), size=(120, 50))
+        footer.add_widget(Button(background_normal='search.png', size_hint=(None, None), size=(120, 120)))
+        profile_button = Button(background_normal='person.png', size_hint=(None, None), size=(120, 120))
         profile_button.bind(on_press=self.go_to_profile)
         footer.add_widget(profile_button)
-
 
         main_layout.add_widget(footer)
         self.add_widget(main_layout)
