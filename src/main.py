@@ -20,6 +20,7 @@ class DriftingBottleApp(App):
         sm.add_widget(Notifications(name='notifications'))
         sm.add_widget(Background(name='background'))
         sm.add_widget(Devices(name='devices'))
+        Window.clearcolor=[142/255,184/255,229/255,1]
         Window.size = (360, 640)
         return sm
 
