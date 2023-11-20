@@ -41,7 +41,7 @@ class MainPage(Screen):
         header.add_widget(spacer_right)
 
         # Settings button (right-aligned)
-        settings_button = Button(background_normal='setting.png', size_hint=(None, None), size=(90, 90))
+        settings_button = Button(background_normal='assets/setting.png', size_hint=(None, None), size=(90, 90))
         settings_button.bind(on_press=self.go_to_settings)
         header.add_widget(settings_button)
 
@@ -55,15 +55,15 @@ class MainPage(Screen):
         footer = BoxLayout(size_hint_y=None, height=50, orientation='horizontal',
                            spacing=(Window.width - (3 * 120)) / 7)
         
-        bottle_button = Button(background_normal='../../assets/bottle.png', size_hint=(None, None), size=(120, 120))
+        bottle_button = Button(background_normal='assets/bottle.png', size_hint=(None, None), size=(120, 120))
         bottle_button.bind(on_press=self.go_to_create_bottle)
         footer.add_widget(bottle_button)
         
-        search_button = Button(background_normal='../../assets/search.png', size_hint=(None, None), size=(120, 120))
+        search_button = Button(background_normal='assets/search.png', size_hint=(None, None), size=(120, 120))
         search_button.bind(on_press=self.go_to_search)
         footer.add_widget(search_button)
 
-        profile_button = Button(background_normal='../../assets/person.png', size_hint=(None, None), size=(120, 120))
+        profile_button = Button(background_normal='assets/person.png', size_hint=(None, None), size=(120, 120))
         profile_button.bind(on_press=self.go_to_profile)
         footer.add_widget(profile_button)
 
@@ -100,12 +100,3 @@ class MainPage(Screen):
 
     def go_to_search(self, instance):
         self.manager.current = 'search'
-        
-class TestApp(App):
-    def build(self):
-        sm = ScreenManager()
-        sm.add_widget(MainPage(name='main'))
-        return sm
-
-if __name__ == '__main__':
-    TestApp().run()
