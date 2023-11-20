@@ -11,8 +11,10 @@ from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager
 from kivy.clock import Clock
 
+
 class IconLabel(ButtonBehavior, Label):
     pass
+
 
 class MainPage(Screen):
     def __init__(self, **kwargs):
@@ -39,7 +41,7 @@ class MainPage(Screen):
         header.add_widget(spacer_right)
 
         # Settings button (right-aligned)
-        settings_button = Button(background_normal=r'C:\Users\52558\Desktop\KivyTest\drifting-bottles-main\src\assets\setting.png', size_hint=(None, None), size=(90, 90))
+        settings_button = Button(background_normal='setting.png', size_hint=(None, None), size=(90, 90))
         settings_button.bind(on_press=self.go_to_settings)
         header.add_widget(settings_button)
 
@@ -53,23 +55,35 @@ class MainPage(Screen):
         footer = BoxLayout(size_hint_y=None, height=50, orientation='horizontal',
                            spacing=(Window.width - (3 * 120)) / 7)
         
-        bottle_button = Button(background_normal=r'C:\Users\52558\Desktop\KivyTest\drifting-bottles-main\src\assets\bottle.png', size_hint=(None, None), size=(120, 120))
+        bottle_button = Button(background_normal='../../assets/bottle.png', size_hint=(None, None), size=(120, 120))
         bottle_button.bind(on_press=self.go_to_create_bottle)
         footer.add_widget(bottle_button)
         
-        search_button = Button(background_normal=r'C:\Users\52558\Desktop\KivyTest\drifting-bottles-main\src\assets\search.png', size_hint=(None, None), size=(120, 120))
+        search_button = Button(background_normal='../../assets/search.png', size_hint=(None, None), size=(120, 120))
         search_button.bind(on_press=self.go_to_search)
         footer.add_widget(search_button)
 
-        profile_button = Button(background_normal=r'C:\Users\52558\Desktop\KivyTest\drifting-bottles-main\src\assets\person.png', size_hint=(None, None), size=(120, 120))
+        profile_button = Button(background_normal='../../assets/person.png', size_hint=(None, None), size=(120, 120))
         profile_button.bind(on_press=self.go_to_profile)
         footer.add_widget(profile_button)
+
+        # Add background color to the footer
+        with footer.canvas.before:
+            Color(51/255, 83/255, 181/255, .7)  # RGBA color values (adjust as needed)
+            self.footer_background = Rectangle(pos=footer.pos, size=(Window.width, 120))
+
+        # Bind the background to the layout's size and position changes
+        footer.bind(pos=self.update_background, size=self.update_background)
 
         main_layout.add_widget(footer)
         self.add_widget(main_layout)
 
         # Schedule to update the time every second
         Clock.schedule_interval(self.update_time, 1)
+
+    def update_background(self, instance, value):
+        self.footer_background.pos = instance.pos
+        self.footer_background.size = (Window.width, 120)
 
     def update_time(self, *args):
         # Update the time label with the current time
