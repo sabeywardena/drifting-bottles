@@ -10,6 +10,7 @@ from components.ThrowBottle.create_bottle import CreateBottle
 from components.Search.search import SearchBottle
 from components.Profile.profile_page import ProfilePage
 from components.Settings.settings import SettingsPage
+from components.Search.choose_bottle import ChooseBottle
 
 
 class DriftingBottleApp(App):
@@ -22,6 +23,7 @@ class DriftingBottleApp(App):
         sm.add_widget(ProfilePage(name='profile_page'))
         sm.add_widget(Notifications(name='notifications'))
         sm.add_widget(Background(name='background'))
+        sm.add_widget(ChooseBottle(name='choose_bottle'))
         sm.add_widget(Devices(name='devices'))
         Window.size = (390, 844)
         Window.clearcolor = (122/255, 172/255, 225/255, 1)

@@ -51,6 +51,7 @@ class SearchBottle(Screen):
         button_box = BoxLayout(orientation='horizontal', size_hint_y=None, height=50)
         save_button = Button(text='SAVE')
         find_button = Button(text='FIND')
+        find_button.bind(on_press=self.go_to_choose)
         button_box.add_widget(save_button)
         button_box.add_widget(find_button)
         layout.add_widget(button_box)
@@ -61,9 +62,5 @@ class SearchBottle(Screen):
     def go_back(self, instance):
         self.manager.current = 'main_page'
 
-class SearchBottleApp(App):
-    def build(self):
-        return SearchBottle()
-
-if __name__ == '__main__':
-    SearchBottleApp().run()
+    def go_to_choose(self,instance):
+        self.manager.current = 'choose_bottle'
