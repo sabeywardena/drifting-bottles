@@ -11,6 +11,7 @@ from components.Search.search import SearchBottle
 from components.Profile.profile_page import ProfilePage
 from components.Settings.settings import SettingsPage
 
+
 class DriftingBottleApp(App):
     def build(self):
         sm = ScreenManager()
@@ -26,6 +27,7 @@ class DriftingBottleApp(App):
         Window.clearcolor = (122/255, 172/255, 225/255, 1)
 
         return sm
+
 
 if __name__ == '__main__':
     DriftingBottleApp().run()

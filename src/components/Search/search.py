@@ -10,7 +10,7 @@ from kivy.uix.screenmanager import Screen
 class SearchBottle(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        layout = BoxLayout(orientation='vertical', padding=10, spacing=10)
+        layout = BoxLayout(orientation='vertical', padding=10, spacing=10, pos_hint={'center_x': 0.5, 'center_y': 1})
 
         # Back button at the top
         back_button = Button(text='Back', size_hint_y=None, height=50)

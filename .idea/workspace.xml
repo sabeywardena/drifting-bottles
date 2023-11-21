@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6781081c-e781-433f-9a9e-28ff81c50115" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/assets/setting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage/main_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage/main_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +137,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700000958765</updated>
       <workItem from="1700000959939" duration="20331000" />
-      <workItem from="1700503581602" duration="3295000" />
+      <workItem from="1700503581602" duration="4272000" />
     </task>
     <servers />
   </component>
@@ -155,19 +155,9 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/components/LandingPage/main_page.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/drifting_bottles$main_page.coverage" NAME="main_page Coverage Results" MODIFIED="1700506800846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/components/LandingPage" />
     <SUITE FILE_PATH="coverage/drifting_bottles$main.coverage" NAME="main Coverage Results" MODIFIED="1700503695416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/drifting-bottles-main/src" />
-    <SUITE FILE_PATH="coverage/drifting_bottles$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1700507227938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/drifting_bottles$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1700507725536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
