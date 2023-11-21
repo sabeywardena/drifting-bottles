@@ -20,6 +20,7 @@ class ChooseBottle(Screen):
         # Save and Find buttons
         button_box = BoxLayout(orientation='horizontal', size_hint_y=None, height=50)
         select_button = Button(text='SELECT')
+        select_button.bind(on_press=self.go_open)
         throw_back_button = Button(text='THROW BACK')
         throw_back_button.bind(on_press=self.go_search)
         button_box.add_widget(select_button)
@@ -34,3 +35,6 @@ class ChooseBottle(Screen):
 
     def go_search(self, instance):
         self.manager.current = 'search'
+
+    def go_open(self,instance):
+        self.manager.current = 'open'
