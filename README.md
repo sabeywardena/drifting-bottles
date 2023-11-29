@@ -22,7 +22,9 @@ source kivy_venv/bin/activate
 pip install kivy
 ~~~
 (4) Run the main file to activate the app!
+~~~
 python main.py
+~~~
 
 ### Code Structure
 ~~~
